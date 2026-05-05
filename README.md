@@ -1,11 +1,27 @@
 # Route Fuel Optimization API
 
 ## Features
-- Geocoding (OpenCage)
-- Routing (OpenRouteService)
-- Fuel stop calculation
-- Cost estimation
+- Convert locations to coordinates
+- Calculate route using OpenRouteService
+- Find fuel stops using dataset
+- Estimate total fuel cost
 
-## Run
+## Tech Stack
+- Django REST Framework
+- OpenCage API
+- OpenRouteService API
+- Pandas + NumPy
+
+## Run Project
+
 pip install -r requirements.txt
 python manage.py runserver
+
+## API Endpoint
+
+POST /api/route/
+
+{
+  "start": "New York",
+  "end": "Los Angeles"
+}
